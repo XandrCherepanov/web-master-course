@@ -1,0 +1,334 @@
+<!doctype html>
+<html lang="ru">
+
+	<head>
+		<meta charset="utf-8">
+
+		<title>Lesson 2 - Web Master Course</title>
+
+		<meta name="description" content="Web Master Course HTML and CSS">
+		<meta name="author" content="Alexandr Cherepanov">
+
+		<meta name="apple-mobile-web-app-capable" content="yes" />
+		<meta name="apple-mobile-web-app-status-bar-style" content="black-translucent" />
+
+		<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+
+		<link rel="stylesheet" href="css/reveal.min.css">
+		<link rel="stylesheet" href="css/theme/solarized.css" id="theme">
+
+		<!-- For syntax highlighting -->
+		<link rel="stylesheet" href="lib/css/zenburn.css">
+
+		<!-- If the query includes 'print-pdf', include the PDF print sheet -->
+		<script>
+			if( window.location.search.match( /print-pdf/gi ) ) {
+				var link = document.createElement( 'link' );
+				link.rel = 'stylesheet';
+				link.type = 'text/css';
+				link.href = 'css/print/pdf.css';
+				document.getElementsByTagName( 'head' )[0].appendChild( link );
+			}
+		</script>
+
+		<!--[if lt IE 9]>
+		<script src="lib/js/html5shiv.js"></script>
+		<![endif]-->
+	</head>
+
+	<body>
+
+		<div class="reveal">
+
+			<!-- Any section element inside of this container is displayed as a slide -->
+			<div class="slides">
+				<section>
+					<h1>Основные теги HTML</h1>
+				</section>
+				<section>
+					<h2>HTML</h2>
+					<ul>
+						<li>HTML - HyperText Markup Language (язык разметки гипертекста)</li>
+						<li>HTML основан на SGML (Standard Generalized Markup Language)</li>
+						<li>HTML 4 основывался на необходимости оформления документов</li>
+					</ul>
+				</section>
+				<section>
+					<h2>XHTML</h2>
+					<ul>
+						<li>XHTML - eXtensible HyperText Markup Language (расширяемый язык разметки гипертекста)</li>
+						<ul>
+							<li>В действительности не расширяемый</li>
+						</ul>
+						<li>XHTML - HTML с более строгими правилами</li>
+						<li><strong>Строгие правила = лучше совместимость = приложения лучше работают на разных устройствах</strong></li>
+					</ul>
+				</section>
+				<section>
+					<h2>Версии HTML и XTML</h2>
+					<ul>
+						<li>HTML 4.01 - Последняя утвержденная версия HTML (1999 г.)</li>
+						<li>XHTML 1.0 - Основан на HTML 4.01</li>
+						<li>XHTML 1.1 - Очень строгая версия, для оформления допускается использовать только CSS</li>
+						<li>XHTML 2.0 - Разработка закрыта в 2006 г.</li>
+						<li>HTML 5 - Разработка не завершена</li>
+					</ul>				
+				</section>
+				<section>
+					<h2>Структура HTML</h2>
+					<pre><code>
+&lt;TITLE&gt;
+   A Simple Document
+&lt;/TITLE&gt;
+
+&lt;P> A simple HTML Document.
+					</code></pre>
+				</section>
+				<section>
+					<h2>Структура XHTML</h2>
+					<pre><code>
+&lt;?xml version="1.0" encoding="utf-8"?&gt;
+&lt;!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+    "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd"&gt;
+&lt;html xmlns="http://www.w3.org/1999/xhtml"&gt;
+&lt;head&gt;
+    &lt;title&gt; A Simple Document &lt;/title&gt;
+&lt;/head&gt;
+
+&lt;body bgcolor="#FFFFFF"&gt;
+
+    &lt;p&gt; A simple HTML Document. &lt;/p&gt;
+
+&lt;/body&gt;
+&lt;/html&gt;
+					</code></pre>
+				</section>
+				<section>
+					<h2>Структура HTML 5</h2>
+					<pre><code>
+&lt;!DOCTYPE html&gt;
+&lt;html&gt;
+&lt;head&gt;
+    &lt;title&gt; A Simple Document &lt;/title&gt;
+&lt;/head&gt;
+&lt;body&gt;
+
+    &lt;p&gt; A simple HTML Document. &lt;/p&gt;
+
+&lt;/body&gt;
+&lt;/html&gt;
+					</code></pre>
+				</section>
+				<section data-markdown>
+					<script type="text/template">
+						## Doctype
+
+						- Strict (Строгий)
+
+<pre>&lt;!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN"
+  "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd"&gt;</pre>
+
+						- Transitional (Переходный)
+
+<pre>&lt;!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" 
+ "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd"&gt;</pre>
+
+						- Frameset (С фреймами)
+
+<pre>&lt;!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Frameset//EN" 
+ "http://www.w3.org/TR/xhtml1/DTD/xhtml1-frameset.dtd"&gt;</pre>
+					</script>
+				</section>
+				<section data-markdown>
+					## Правила XHTML
+					- Все теги и их атрибуты должны быть набраны в нижнем регистре (строчными символами).
+					- Значения любых атрибутов необходимо заключать в кавычки.
+					- Требуется закрывать все теги, даже такие, которым не сопоставлен закрывающий тег.
+					- Должна соблюдаться правильная вложенность тегов.
+					- Нельзя использовать сокращенные атрибуты тегов.
+					- Вместо атрибута name следует указывать id.
+					- Следует определять DTD (document type definition, описание типа документа) с помощью элемента <!DOCTYPE>.
+				</section>
+				<section>
+					<h2>Спец символы</h2>
+					<img src="img/spec1.png" height="400" />
+					<p><a href="http://htmlbook.ru/samhtml/tekst/spetssimvoly">Все спецсимволы по ссылке</a></p>
+				</section>
+				<section>
+					<h2>Спец символы</h2>
+					<img src="img/spec2.png" height="140" />
+					<img src="img/spec3.png" height="350" />
+				</section>
+				<section>
+					<h2>&lt;p&gt;</h2>
+					<p>Определяет текстовый абзац. Тег &lt;p&gt; является блочным элементом, всегда начинается с новой строки, абзацы текста идущие друг за другом разделяются между собой разрывом.</p>
+					<pre><code>
+<p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diem 
+  nonummy nibh euismod tincidunt ut lacreet dolore magna aliguam erat volutpat.</p>
+					</code></pre>
+					<p>Все множественные пробелы (tab, enter) в HTML преобразуются в один пробел.</p>
+				</section>
+				<section>
+					<h2>&lt;br /&gt;</h2>
+					<p>Тег &lt;br&gt; устанавливает перевод строки в том месте, где этот тег находится. В отличие от тега абзаца &lt;p&gt;, использование тега &lt;br&gt; не добавляет пустой отступ перед строкой.</p>
+					<pre><code>
+&lt;p&gt;Лето в стране настало,&lt;br /&gt;
+   Вереск опять цветет.&lt;br /&gt;
+   Но некому готовить&lt;br /&gt;
+   Вересковый мед.&lt;/p&gt;
+					</code></pre>
+					<p>Используется при написании адреса, стихов и др.</p>
+				</section>
+				<section>
+					<h2>&lt;em&gt;</h2>
+					<p>Тег &lt;em&gt; предназначен для акцентирования текста. Браузеры отображают такой текст курсивным начертанием.</p>
+					<pre><code>
+<p><em>Lorem ipsum dolor sit amet</em></p>
+					</code></pre>
+				</section>
+				<section>
+					<h2>&lt;strong&gt;</h2>
+					<p>Тег &lt;strong&gt; предназначен для акцентирования текста. Браузеры отображают такой текст жирным начертанием.</p>
+					<pre><code>
+<p><strong>Lorem ipsum dolor sit amet</strong></p>
+					</code></pre>
+				</section>
+				<section>
+					<h2>&lt;q&gt;</h2>
+					<p>Тег &lt;q&gt; используется для выделения в тексте цитат. Содержимое контейнера автоматически отображается в браузере в кавычках.</p>
+					<pre><code>
+<p>Станислав Лец утверждал: <q>Чаще всего выход там, где был 
+    вход</q>.</p>
+					</code></pre>
+				</section>
+				<section>
+					<h2>&lt;code&gt;</h2>
+					<p>Тег &lt;code&gt; предназначен для отображения одной или нескольких строк текста, который представляет собой программный код. Сюда относятся имена переменных, ключевые слова, тексты функции и т.д. Браузеры обычно отображают содержимое контейнера &lt;code&gt; как моноширинный текст уменьшенного размера.</p>
+					<pre><code>
+<p><code>
+    function checkParent (src, dest) {<br />
+     while (src != null) {<br />
+       if (src.tagName == dest) return src;<br />
+        src = src.parentElement;<br />
+     }<br />
+     return null;<br />
+    }</code></p>
+					</code></pre>
+				</section>
+				<section>
+					<h2>&lt;abbr&gt;</h2>
+					<p>Тег &lt;abbr&gt; указывает, что последовательность символов является аббревиатурой. С помощью атрибута title дается расшифровка сокращения, что позволяет понимать аббревиатуру тем людям, которые с ней не знакомы.</p>
+					<pre><code>
+<p><abbr title="Common Gateway Interface, общий шлюзовый интерфейс">CGI
+	</abbr></p>
+					</code></pre>
+				</section>
+				<section>
+					<h2>&lt;dfn&gt;</h2>
+					<p>Как правило, в документе, когда упоминается новый термин, он выделяется курсивом и дается его определение. При использовании этого термина в дальнейшем, он считается уже известным читателю. Тег &lt;dfn&gt; применяется для выделения таких терминов при их первом появлении в тексте.</p>
+					<pre><code>
+<p><dfn>Капителью</dfn> в типографике называется текст, набранный 
+  прописными буквами уменьшенного размера.</p>
+					</code></pre>
+				</section>
+				<section>
+					<h2>&lt;kbd&gt;</h2>
+					<p>Тег &lt;kbd&gt; используется для обозначения текста, который набирается на клавиатуре или для названия клавиш. Браузеры обычно помечают текст в контейнере &lt;kbd&gt; моноширинным шрифтом.</p>
+					<pre><code>
+<kbd>&amp;lt;Ctrl&amp;gt;+&amp;lt;Backspace&amp;gt;</kbd>
+					</code></pre>
+				</section>
+				<section>
+					<h2>&lt;samp&gt;</h2>
+					<p>Элемент &lt;samp&gt; используется для отображения текста, который является результатом вывода компьютерной программы или скрипта. Браузеры обычно отображают текст в контейнере &lt;samp&gt; с помощью моноширинного шрифта.</p>
+					<pre><code>
+<p>В результате выполнения скрипта вы увидите текст <samp>Ваш 
+    браузер поддерживает JavaScript 1.3</samp>, в том случае, если браузер 
+    работает с версией 1.3.</p>
+					</code></pre>
+				</section>
+				<section>
+					<h2>&lt;var&gt;</h2>
+					<p>Тег &lt;var&gt; используется для выделения переменных компьютерных программ, математических и физических формул. Браузеры обычно помечают текст в контейнере &lt;var&gt; курсивным начертанием.</p>
+					<pre><code>
+<p>В данном примере делается запрос к базе данных для получения поля 
+<var>content_title</var> 
+  из таблицы <var>content</var>, причем должно удовлетворяться условие 
+  <code>section_id = 1</code>.</p>
+					</code></pre>
+				</section>
+				<section>
+					<h2>&lt;blockquote&gt;</h2>
+					<p>Тег &lt;blockquote&gt; предназначен для выделения длинных цитат внутри документа. Текст, обозначенный этим тегом, традиционно отображается как выровненный блок с отступами слева и справа (примерно по 40 пикселов), а также с отбивкой сверху и снизу.</p>
+					<pre><code>
+<blockquote>
+   <p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit, 
+   sed diem nonummy nibh euismod tincidunt ut lacreet dolore magna aliguam erat 
+   volutpat. Ut wisis enim ad minim veniam, quis nostrud exerci tution ullamcorper 
+   suscipit lobortis nisl ut aliquip ex ea commodo consequat.</p>
+  </blockquote>
+					</code></pre>
+				</section>
+				<section>
+					<h2>&lt;pre&gt;</h2>
+					<p>Элемент &lt;pre&gt; определяет блок предварительно форматированного текста. Такой текст отображается обычно моноширинным шрифтом и со всеми пробелами между словами.</p>
+					<pre><code>
+<pre>
+	 -                -----  
+	 -----           |-----
+	||----|          ----||  
+	||-----         -----||  
+	||-----|       |-----||
+	|| -----       ------||
+	||- ----|     |------||
+	||---||--     -------||
+	||--|| --|   |-------||
+	|| -|| |--   --- - --||
+	|| -||  --|-|--| - ---|
+	|---||  |-----| |-----|
+	|---||   |----  |-----| 
+	|----|    ---   |-----|
+	|-----          ------| 
+ </pre>
+					</code></pre>
+				</section>
+				
+			</div>
+
+		</div>
+
+		<script src="lib/js/head.min.js"></script>
+		<script src="js/reveal.min.js"></script>
+
+		<script>
+
+			// Full list of configuration options available here:
+			// https://github.com/hakimel/reveal.js#configuration
+			Reveal.initialize({
+				controls: true,
+				progress: true,
+				history: true,
+				center: true,
+
+				theme: Reveal.getQueryHash().theme, // available themes are in /css/theme
+				transition: Reveal.getQueryHash().transition || 'default', // default/cube/page/concave/zoom/linear/fade/none
+
+				// Parallax scrolling
+				// parallaxBackgroundImage: 'https://s3.amazonaws.com/hakim-static/reveal-js/reveal-parallax-1.jpg',
+				// parallaxBackgroundSize: '2100px 900px',
+
+				// Optional libraries used to extend on reveal.js
+				dependencies: [
+					{ src: 'lib/js/classList.js', condition: function() { return !document.body.classList; } },
+					{ src: 'plugin/markdown/marked.js', condition: function() { return !!document.querySelector( '[data-markdown]' ); } },
+					{ src: 'plugin/markdown/markdown.js', condition: function() { return !!document.querySelector( '[data-markdown]' ); } },
+					{ src: 'plugin/highlight/highlight.js', async: true, callback: function() { hljs.initHighlightingOnLoad(); } },
+					{ src: 'plugin/zoom-js/zoom.js', async: true, condition: function() { return !!document.body.classList; } },
+					{ src: 'plugin/notes/notes.js', async: true, condition: function() { return !!document.body.classList; } }
+				]
+			});
+
+		</script>
+
+	</body>
+</html>
