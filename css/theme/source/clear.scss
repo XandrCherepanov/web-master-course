@@ -93,10 +93,14 @@ $selectionBackgroundColor: $base1;
 
 .reveal h2 {
 	color: darken( $red, 10% );
+	padding-bottom: 5px;
+	border-bottom: 4px solid;
+	font-size: 1.5em;
 }
 
 .reveal h3 {
 	color: $green;
+	font-size: 1.2em;
 }
 
 .reveal p {

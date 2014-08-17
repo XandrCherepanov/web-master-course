@@ -143,10 +143,14 @@ body {
   font-weight: bold; }
 
 .reveal h2 {
-  color: #b9221f; }
+  color: #b9221f;
+  padding-bottom: 5px;
+  border-bottom: 4px solid;
+  font-size: 1.5em; }
 
 .reveal h3 {
-  color: #859900; }
+  color: #859900;
+  font-size: 1.2em; }
 
 .reveal p {
   text-align: justify; }
