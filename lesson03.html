@@ -18,7 +18,7 @@
 		<link rel="stylesheet" href="css/theme/clear.css" id="theme">
 
 		<!-- For syntax highlighting -->
-		<link rel="stylesheet" href="lib/css/zenburn.css">
+		<link rel="stylesheet" href="lib/css/github.css">
 
 		<!-- If the query includes 'print-pdf', include the PDF print sheet -->
 		<script>
@@ -48,7 +48,7 @@
 				<section>
 					<h2>&lt;meta /&gt;</h2>
 					<p>Определяет метатеги, которые используются для хранения информации предназначенной для браузеров и поисковых систем. Например, механизмы поисковых систем обращаются к метатегам для получения описания сайта, ключевых слов и других данных. Как правило, атрибуты любого метатега сводятся к парам «имя=значение», которые определяются ключевыми словами <var>content</var>, <var>name</var> или <var>http-equiv</var>.</p>
-					<pre><code>
+					<pre><code data-trim>
 <!-- XHTML кодировка -->
 &lt;meta http-equiv="Content-Type" content="text/html; charset=utf-8" /&gt;
 <!-- HTML 5 кодировка -->
@@ -60,7 +60,7 @@
 				<section>
 					<h2>&lt;a&gt;</h2>
 					<p>Предназначен для создания ссылок и якорей. В качестве значения атрибута <var>href</var> используется адрес документа (URL, Universal Resource Locator, универсальный указатель ресурсов), на который происходит переход. Адрес ссылки может быть абсолютным и относительным. Абсолютные адреса работают везде и всюду независимо от имени сайта или веб-страницы, где прописана ссылка. Относительные ссылки, как следует из их названия, построены относительно текущего документа или корня сайта.</p>
-					<pre><code>
+					<pre><code data-trim>
 <a href="URL">...</a>
 					</code></pre>
 				</section>
@@ -71,7 +71,7 @@
 						<li><code>target="_blank"</code> - Загружает страницу в новое окно браузера</li>
 						<li><code>target="_self"</code> - Загружает страницу в текущее окно</li>
 					</ul>
-					<pre><code>
+					<pre><code data-trim>
 <p><a href="http://google.ru/">Google</a></p>
 
 <p><a href="mailto:alexandr@gmail.com">alexandr@gmail.com</a></p>
@@ -89,10 +89,10 @@
 				<section>
 					<h2>&lt;a&gt;</h2>
 					<p>Якорем называется закладка внутри страницы, которую можно указать в качестве цели ссылки. При использовании ссылки, которая указывает на якорь, происходит переход к закладке внутри веб-страницы. Вначале следует задать в соответствующем месте закладку и установить ее имя при помощи атрибута <var>id</var> (<var>name</var>) тега <var>&lt;a&gt;</var></p>
-					<pre><code>
+					<pre><code data-trim>
 <a id="identificator">...</a>
 					</code></pre>
-					<pre><code>
+					<pre><code data-trim>
 <p><a id="top"></a></p>  
 <img src="img.jpg" height="3000" />
   

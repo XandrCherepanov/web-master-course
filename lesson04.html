@@ -18,7 +18,7 @@
 		<link rel="stylesheet" href="css/theme/clear.css" id="theme">
 
 		<!-- For syntax highlighting -->
-		<link rel="stylesheet" href="lib/css/zenburn.css">
+		<link rel="stylesheet" href="lib/css/github.css">
 
 		<!-- If the query includes 'print-pdf', include the PDF print sheet -->
 		<script>
@@ -76,7 +76,7 @@
 				<section>
 					<h2>&lt;section&gt;</h2>
 					<p>Задаёт раздел документа, может применяться для блока новостей, контактной информации, глав текста, вкладок в диалоговом окне и др. Раздел обычно содержит заголовок. Допускается вкладывать один тег <var>&lt;section&gt;</var> внутрь другого.</p>
-					<pre><code class="xml">
+					<pre><code data-trim>
 &lt;section&gt;
 	&lt;h1&gt;Heading&lt;/h1&gt;
 	&lt;p&gt;Bunch of awesome content&lt;/p&gt;
@@ -86,7 +86,7 @@
 				<section>
 					<h2>&lt;article&gt;</h2>
 					<p>Тег <var>&lt;article&gt;</var> задает содержание сайта вроде новости, статьи, записи блога, форума или др.</p>
-					<pre><code class="xml">
+					<pre><code data-trim>
 <article>
   <h4>A really awesome article</h4>
   <p>Lots of awesome text.</p>
@@ -96,7 +96,7 @@
 				<section>
 					<h2>&lt;aside&gt;</h2>
 					<p>Определяет блок сбоку от контента для размещения рубрик, ссылок на архив, меток и другой информации. Такой блок, как правило, называется «сайдбар» или «боковая панель».</p>
-					<pre><code class="xml">
+					<pre><code data-trim>
 <article>
   <p>
     The Disney movie <em>The Little Mermaid</em> was
@@ -114,7 +114,7 @@
 				<section>
 					<h2>&lt;header&gt;</h2>
 					<p>Тег <var>&lt;header&gt;</var> задает «шапку» сайта или раздела, в которой обычно располагается заголовок.</p>
-					<pre><code class="xml">
+					<pre><code data-trim>
 <header>
   a logo
 </header>
@@ -123,7 +123,7 @@
 				<section>
 					<h2>&lt;footer&gt;</h2>
 					<p>Тег <var>&lt;footer&gt;</var> задаёт «подвал» сайта или раздела, в нём может располагается имя автора, дата документа, контактная и правовая информация.</p>
-					<pre><code class="xml">
+					<pre><code data-trim>
 <footer>
   Some copyright info or perhaps some author info for an &lt;article&gt;?
 </footer>
@@ -132,7 +132,7 @@
 				<section>
 					<h2>&lt;nav&gt;</h2>
 					<p>Тег <var>&lt;nav&gt;</var> задает навигацию по сайту. Если на странице несколько блоков ссылок, то в <var>&lt;nav&gt;</var> обычно помещают приоритетные ссылки. Также допустимо использовать несколько тегов <var>&lt;nav&gt;</var> в документе. </p>
-					<pre><code class="xml">
+					<pre><code data-trim>
 <nav>
   <ul>
     <li><a href="#">Home</a></li>
@@ -145,7 +145,7 @@
 				<section>
 					<h2>&lt;figure&gt;</h2>
 					<p>Используется для группирования любых элементов, например, изображений и подписей к ним.</p>
-					<pre><code class="xml">
+					<pre><code data-trim>
 <figure>
 	<img src="https://mozilla.net/mdn-logo-sm.png" alt="An awesome picture">
 </figure>
@@ -154,7 +154,7 @@
 				<section>
 					<h2>&lt;figcaption&gt;</h2>
 					<p>Содержит описание для тега <var>&lt;figure&gt;</var>. Тег <var>&lt;figcaption&gt;</var> должен быть первым или последним элементом в группе.</p>
-					<pre><code class="xml">
+					<pre><code data-trim>
 <figure>
 	<img src="https://mozilla.net/mdn-logo-sm.png" alt="An awesome picture">	
 	<figcaption>Caption for the awesome picture</figcaption>
@@ -164,7 +164,7 @@
 				<section>
 					<h2>&lt;video&gt;</h2>
 					<p>Добавляет, воспроизводит и управляет настройками видеоролика на веб-странице. Путь к файлу задается через атрибут <var>src</var> или вложенный тег <var>&lt;source&gt;</var>. Список поддерживаемых браузерами аудио и видеокодеков ограничен.</p>
-					<pre><code class="xml">
+					<pre><code data-trim>
 <video width="400" height="300" controls="controls" poster="video/duel.jpg">
    <source src="video/duel.ogv" type='video/ogg; codecs="theora, vorbis"'>
    <source src="video/duel.mp4" type='video/mp4; codecs="avc1.42E01E, mp4a.40.2"'>
@@ -177,7 +177,7 @@
 				<section>
 					<h2>&lt;audio&gt;</h2>
 					<p>Добавляет, воспроизводит и управляет настройками аудиозаписи на веб-странице. Путь к файлу задается через атрибут src или вложенный тег <var>&lt;source&gt;</var>. Внутри контейнера <var>&lt;audio&gt;</var> можно написать текст, который будет выводиться в браузерах, не работающих с этим тегом.</p>
-					<pre><code class="xml">
+					<pre><code data-trim>
 <audio controls>
     <source src="audio/music.ogg" type="audio/ogg; codecs=vorbis">
     <source src="audio/music.mp3" type="audio/mpeg">
@@ -219,14 +219,14 @@
 					<p>Элемент <var>&lt;embed&gt;</var> используется для загрузки и отображения объектов (например, видеофайлов, флэш-роликов, некоторых звуковых файлов и т.д.), которые исходно браузер не понимает. Как правило, такие объекты требуют подключения к браузеру специального модуля, который называется плагин, или запуска вспомогательной программы.</p>
 <p>
 Спецификация HTML 4.0 рекомендует использовать тег <var>&lt;object&gt;</var> для загрузки внешних данных вместо тега <var>&lt;embed&gt;</var>. Однако некоторые браузеры не отображают таким образом нужную информацию, поэтому наилучшим вариантом будет поместить <var>&lt;embed&gt;</var> внутрь контейнера <var>&lt;object&gt;</var>.</p>
-					<pre><code class="xml">
+					<pre><code data-trim>
 <embed type="video/quicktime" src="movie.mov" width="640" height="480">
 					</code></pre>
 				</section>
 				<section>
 					<h2>&lt;canvas&gt;</h2>
 					<p>Создает область, в которой при помощи <em>JavaScript</em> можно рисовать разные объекты, выводить изображения, трансформировать их и менять свойства. При помощи тега <var>&lt;canvas&gt;</var> можно создавать рисунки, анимацию, игры и др.</p>
-					<pre><code class="xml">
+					<pre><code data-trim>
 <canvas id="canvas" width="300" height="300">
   Sorry, your browser doesn't support the &lt;canvas&gt; element.
 </canvas>
@@ -235,14 +235,14 @@
 				<section>
 					<h2>&lt;progress&gt;</h2>
 					<p>Используется для отображения прогресса завершенности задачи. Изменение значения происходит через JavaScript.</p>
-					<pre><code class="xml">
+					<pre><code data-trim>
 <progress value="70" max="100">70 %</progress>
 					</code></pre>
 				</section>
 				<section>
 					<h2>&lt;time&gt;</h2>
 					<p>Помечает текст внутри тега <var>&lt;time&gt;</var> как дата, время или оба значения. Может указываться непосредственно внутри контейнера <var>&lt;time&gt;</var>, либо задаваться через атрибут <var>datetime</var>.</p>
-					<pre><code class="xml">
+					<pre><code data-trim>
 <p>The concert starts at <time>20:00</time>.</p>
 <p>The concert took place on <time datetime="2001-05-15 19:00">May 15</time>.</p>
 					</code></pre>

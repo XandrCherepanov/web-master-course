@@ -18,7 +18,7 @@
 		<link rel="stylesheet" href="css/theme/clear.css" id="theme">
 
 		<!-- For syntax highlighting -->
-		<link rel="stylesheet" href="lib/css/zenburn.css">
+		<link rel="stylesheet" href="lib/css/github.css">
 
 		<!-- If the query includes 'print-pdf', include the PDF print sheet -->
 		<script>
@@ -76,7 +76,7 @@
 				</section>
 				<section>
 					<h2>Структура HTML</h2>
-					<pre><code>
+					<pre><code data-trim>
 &lt;TITLE&gt;
    A Simple Document
 &lt;/TITLE&gt;
@@ -86,7 +86,7 @@
 				</section>
 				<section>
 					<h2>Структура XHTML</h2>
-					<pre><code>
+					<pre><code data-trim>
 &lt;?xml version="1.0" encoding="utf-8"?&gt;
 &lt;!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
     "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd"&gt;
@@ -105,7 +105,7 @@
 				</section>
 				<section>
 					<h2>Структура HTML 5</h2>
-					<pre><code>
+					<pre><code data-trim>
 &lt;!DOCTYPE html&gt;
 &lt;html&gt;
 &lt;head&gt;
@@ -161,7 +161,7 @@
 				<section>
 					<h2>&lt;p&gt;</h2>
 					<p>Определяет текстовый абзац. Тег <var>&lt;p&gt;</var> является блочным элементом, всегда начинается с новой строки, абзацы текста идущие друг за другом разделяются между собой разрывом.</p>
-					<pre><code>
+					<pre><code data-trim>
 <p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diem 
   nonummy nibh euismod tincidunt ut lacreet dolore magna aliguam erat volutpat.</p>
 					</code></pre>
@@ -170,7 +170,7 @@
 				<section>
 					<h2>&lt;br /&gt;</h2>
 					<p>Тег <var>&lt;br&gt;</var> устанавливает перевод строки в том месте, где этот тег находится. В отличие от тега абзаца <var>&lt;p&gt;</var>, использование тега <var>&lt;br&gt;</var> не добавляет пустой отступ перед строкой.</p>
-					<pre><code>
+					<pre><code data-trim>
 &lt;p&gt;Лето в стране настало,&lt;br /&gt;
    Вереск опять цветет.&lt;br /&gt;
    Но некому готовить&lt;br /&gt;
@@ -181,21 +181,21 @@
 				<section>
 					<h2>&lt;em&gt;</h2>
 					<p>Тег <var>&lt;em&gt;</var> предназначен для акцентирования текста. Браузеры отображают такой текст курсивным начертанием.</p>
-					<pre><code>
+					<pre><code data-trim>
 <p><em>Lorem ipsum dolor sit amet</em></p>
 					</code></pre>
 				</section>
 				<section>
 					<h2>&lt;strong&gt;</h2>
 					<p>Тег <var>&lt;strong&gt;</var> предназначен для акцентирования текста. Браузеры отображают такой текст жирным начертанием.</p>
-					<pre><code>
+					<pre><code data-trim>
 <p><strong>Lorem ipsum dolor sit amet</strong></p>
 					</code></pre>
 				</section>
 				<section>
 					<h2>&lt;q&gt;</h2>
 					<p>Тег <var>&lt;q&gt;</var> используется для выделения в тексте цитат. Содержимое контейнера автоматически отображается в браузере в кавычках.</p>
-					<pre><code>
+					<pre><code data-trim>
 <p>Станислав Лец утверждал: <q>Чаще всего выход там, где был 
     вход</q>.</p>
 					</code></pre>
@@ -203,7 +203,7 @@
 				<section>
 					<h2>&lt;code&gt;</h2>
 					<p>Тег <var>&lt;code&gt;</var> предназначен для отображения одной или нескольких строк текста, который представляет собой программный код. Сюда относятся имена переменных, ключевые слова, тексты функции и т.д. Браузеры обычно отображают содержимое контейнера <var>&lt;code&gt;</var> как моноширинный текст уменьшенного размера.</p>
-					<pre><code>
+					<pre><code data-trim>
 <p><code>
     function checkParent (src, dest) {<br />
      while (src != null) {<br />
@@ -217,7 +217,7 @@
 				<section>
 					<h2>&lt;abbr&gt;</h2>
 					<p>Тег <var>&lt;abbr&gt;</var> указывает, что последовательность символов является аббревиатурой. С помощью атрибута <var>title</var> дается расшифровка сокращения, что позволяет понимать аббревиатуру тем людям, которые с ней не знакомы.</p>
-					<pre><code>
+					<pre><code data-trim>
 <p><abbr title="Common Gateway Interface, общий шлюзовый интерфейс">CGI
 	</abbr></p>
 					</code></pre>
@@ -225,7 +225,7 @@
 				<section>
 					<h2>&lt;dfn&gt;</h2>
 					<p>Как правило, в документе, когда упоминается новый термин, он выделяется курсивом и дается его определение. При использовании этого термина в дальнейшем, он считается уже известным читателю. Тег <var>&lt;dfn&gt;</var> применяется для выделения таких терминов при их первом появлении в тексте.</p>
-					<pre><code>
+					<pre><code data-trim>
 <p><dfn>Капителью</dfn> в типографике называется текст, набранный 
   прописными буквами уменьшенного размера.</p>
 					</code></pre>
@@ -233,14 +233,14 @@
 				<section>
 					<h2>&lt;kbd&gt;</h2>
 					<p>Тег <var>&lt;kbd&gt;</var> используется для обозначения текста, который набирается на клавиатуре или для названия клавиш. Браузеры обычно помечают текст в контейнере <var>&lt;kbd&gt;</var> моноширинным шрифтом.</p>
-					<pre><code>
+					<pre><code data-trim>
 <kbd>&amp;lt;Ctrl&amp;gt;+&amp;lt;Backspace&amp;gt;</kbd>
 					</code></pre>
 				</section>
 				<section>
 					<h2>&lt;samp&gt;</h2>
 					<p>Элемент <var>&lt;samp&gt;</var> используется для отображения текста, который является результатом вывода компьютерной программы или скрипта. Браузеры обычно отображают текст в контейнере <var>&lt;samp&gt;</var> с помощью моноширинного шрифта.</p>
-					<pre><code>
+					<pre><code data-trim>
 <p>В результате выполнения скрипта вы увидите текст <samp>Ваш 
     браузер поддерживает JavaScript 1.3</samp>, в том случае, если браузер 
     работает с версией 1.3.</p>
@@ -249,7 +249,7 @@
 				<section>
 					<h2>&lt;var&gt;</h2>
 					<p>Тег <var>&lt;var&gt;</var> используется для выделения переменных компьютерных программ, математических и физических формул. Браузеры обычно помечают текст в контейнере <var>&lt;var&gt;</var> курсивным начертанием.</p>
-					<pre><code>
+					<pre><code data-trim>
 <p>В данном примере делается запрос к базе данных для получения поля 
 <var>content_title</var> 
   из таблицы <var>content</var>, причем должно удовлетворяться условие 
@@ -259,7 +259,7 @@
 				<section>
 					<h2>&lt;blockquote&gt;</h2>
 					<p>Тег <var>&lt;blockquote&gt;</var> предназначен для выделения длинных цитат внутри документа. Текст, обозначенный этим тегом, традиционно отображается как выровненный блок с отступами слева и справа (примерно по 40 пикселов), а также с отбивкой сверху и снизу.</p>
-					<pre><code>
+					<pre><code data-trim>
 <blockquote>
    <p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit, 
    sed diem nonummy nibh euismod tincidunt ut lacreet dolore magna aliguam erat 
@@ -271,7 +271,7 @@
 				<section>
 					<h2>&lt;pre&gt;</h2>
 					<p>Элемент <var>&lt;pre&gt;</var> определяет блок предварительно форматированного текста. Такой текст отображается обычно моноширинным шрифтом и со всеми пробелами между словами.</p>
-					<pre><code>
+					<pre><code data-trim>
 <pre>
 	 -                -----  
 	 -----           |-----
